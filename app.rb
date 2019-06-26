@@ -4,7 +4,7 @@ module FormsLab
   class App < Sinatra::Base
 
   get '/pirates' do
-    @pirates = Pirate.all 
+    @pirates = Pirate.all
     erb :'pirates/index'
   end
 
@@ -21,7 +21,7 @@ module FormsLab
     pirate = Pirate.new(name: params[:pirate][:name], height: params[:pirate][:height], weight: params[:pirate][:height])
   end
 
-  
+
 
   end
 end
