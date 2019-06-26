@@ -8,14 +8,10 @@ module FormsLab
       erb :'pirates/index'
     end
 
-    get '/pirates/new' do
-      erb :'pirates/new'
+    get '/new' do
+      erb :'/new'
     end
 
-    get '/pirates/:id' do
-      @pirate = Pirate.find(params[:id])
-      erb :'pirates/show'
-    end
 
     post '/pirates' do
       pirate = Pirate.new(name: params[:pirate][:name], height: params[:pirate][:height], weight: params[:pirate][:height])
